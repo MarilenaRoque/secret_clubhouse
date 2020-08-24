@@ -8,10 +8,12 @@
   <%= @post.body %>
 </p>
 
-<% if user_signed_in? %> 
+<p>
   <strong>Author:</strong>
-  <%= @post.user.name %>
-<% end %>
+  <%= author_name(@post) %>
+</p>
+</br>
+</br>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
