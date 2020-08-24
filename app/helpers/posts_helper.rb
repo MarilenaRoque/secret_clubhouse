@@ -8,6 +8,6 @@ module PostsHelper
   end
 
   def display_if_author(post)
-    return 'd-none' unless current_user.id == post.user_id
+    return 'd-none' unless user_signed_in? && current_user.id == post.user_id 
   end
 end
