@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if user_signed_in?
       @post = current_user.posts.build
     else
-      redirect_to posts_url, :alert => "Restricted area"
+      redirect_to posts_url, alert: 'Restricted area'
     end
   end
 
