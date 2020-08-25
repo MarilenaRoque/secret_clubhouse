@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path, class: "btn btn-light"%>
+<%= link_to 'New Post', new_post_path, class: "btn btn-light #{display_if_user_signed_in}"%>

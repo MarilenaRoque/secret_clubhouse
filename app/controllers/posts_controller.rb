@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[show index]
 
   # GET /posts
   # GET /posts.json
@@ -13,11 +14,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    if user_signed_in?
-      @post = current_user.posts.build
-    else
-      redirect_to posts_url, alert: 'Restricted area'
-    end
+    @post = current_user.posts.build
   end
 
   # GET /posts/1/edit
