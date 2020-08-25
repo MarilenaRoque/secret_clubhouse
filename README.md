@@ -44,13 +44,13 @@ If you're a member you can see the content of the post and its author
 
 ## Features
 
-If you're not an authenticated member
+If you're not an authenticated member:
 
 - Sign Up to the club
 - Log in
 - See the content of the posts but not the author of it.
 
- If you are an authenticated member
+ If you are an authenticated member:
 
 - Create a post
 - Update your posts
