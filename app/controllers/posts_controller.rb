@@ -13,7 +13,11 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = current_user.posts.build
+    if user_signed_in?
+      @post = current_user.posts.build
+    else
+      redirect_to posts_url, :alert => "Restricted area"
+    end
   end
 
   # GET /posts/1/edit
